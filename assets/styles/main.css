@@ -10843,6 +10843,26 @@ body {
 .footer {
   padding: 5rem 0;
 }
+@media (min-width: 850px) {
+  iframe {
+    max-width: 250px;
+  }
+  @keyframes foo { 
+    0% { content: url(/assets/imgs/p31.png); } 
+    25% { content: url(/assets/imgs/p32.png); } 
+    50% { content: url(/assets/imgs/p33.png); } 
+    75% { content: url(/assets/imgs/p34.png); } 
+    100% { content: url(/assets/imgs/p35.png); } 
+  } 
+  .bar {
+    animation-name: foo; 
+	  animation-duration: 7s; 
+	  animation-iteration-count: infinite; 
+    max-height: 100px; 
+    max-width: 250px; 
+    align-items: center;
+  }
+}
 @keyframes foo { 
 	0% { content: url(/assets/imgs/p31.png); } 
 	25% { content: url(/assets/imgs/p32.png); } 
@@ -10857,3 +10877,23 @@ body {
 	max-height: 200px; 
 	max-width: 90vw; 
 } 
+
+div.click-to-top {
+  display: inline;;
+}
+div.click-to-top span 
+  {
+    flex-direction: inherit;
+    display: none;
+    position: absolute;
+    justify-content: center; 
+    max-width: 190px; 
+    background: rgb(89, 14, 121); 
+    color: #fff; }
+
+div.click-to-top:hover span {
+  display: inline-flex; 
+  justify-content: center;
+  position: relative;
+  border-radius: 90px;
+}
