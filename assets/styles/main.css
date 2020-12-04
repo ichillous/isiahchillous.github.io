@@ -10767,6 +10767,7 @@ body {
   .projects-section .project-text {
     padding: 5rem;
   }
+  
   .projects-section .project-text hr {
     border-color: #64a19d;
     border-width: 0.25rem;
@@ -10858,6 +10859,11 @@ body {
 	max-height: 200px; 
 	max-width: 90vw; 
 } 
+@media (max-width: 812px){
+  .bar {
+    max-width: 200px;
+  }
+}
 
 div.click-to-top {
   display: inline;;
