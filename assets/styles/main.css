@@ -10857,7 +10857,8 @@ body {
 	animation-duration: 7s; 
 	animation-iteration-count: infinite; 
 	max-height: 200px; 
-	max-width: 90vw; 
+  max-width: 90vw; 
+  display: flex;
 } 
 @media (max-width: 812px){
   .bar {
