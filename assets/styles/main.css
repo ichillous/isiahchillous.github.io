@@ -10868,7 +10868,10 @@ body {
 @media (max-width: 812px){
   .chilligram{
     max-width: 100px;
-    
+
+  }
+  .img {
+    max-width: 100px;
   }
   .bar {
     max-width: 200px;
