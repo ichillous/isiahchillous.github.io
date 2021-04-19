@@ -10851,6 +10851,7 @@ body {
 	75% { content: url(/assets/imgs/p34.png); } 
 	100% { content: url(/assets/imgs/p35.png); } 
 } 
+
 .bar { 
 	animation-name: foo; 
 	animation-duration: 7s; 
@@ -10858,6 +10859,10 @@ body {
 	max-height: 200px; 
 	max-width: 90vw; 
 } 
+.chilligram {
+  max-height: 300px;
+  max-width: 300px;
+}
 
 div.click-to-top {
   display: inline;;
@@ -10877,4 +10882,12 @@ div.click-to-top:hover span {
   justify-content: center;
   position: relative;
   border-radius: 90px;
+}
+
+.project-1 {
+  max-width: 800px;
+  display: center;
+  align-items: center;
+  float: left;
+  padding: auto;
 }
