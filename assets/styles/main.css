@@ -10861,16 +10861,18 @@ body {
   max-width: 90vw; 
   display: flex;
 } 
-<<<<<<< HEAD
 .chilligram {
   max-height: 300px;
   max-width: 300px;
-=======
+}
 @media (max-width: 812px){
+  .chilligram{
+    max-width: 100px;
+    
+  }
   .bar {
     max-width: 200px;
   }
->>>>>>> 4a7064ec577574ff31db31546dc9e356658f61f8
 }
 
 div.click-to-top {
