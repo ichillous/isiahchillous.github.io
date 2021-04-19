@@ -10767,6 +10767,7 @@ body {
   .projects-section .project-text {
     padding: 5rem;
   }
+  
   .projects-section .project-text hr {
     border-color: #64a19d;
     border-width: 0.25rem;
@@ -10857,11 +10858,19 @@ body {
 	animation-duration: 7s; 
 	animation-iteration-count: infinite; 
 	max-height: 200px; 
-	max-width: 90vw; 
+  max-width: 90vw; 
+  display: flex;
 } 
+<<<<<<< HEAD
 .chilligram {
   max-height: 300px;
   max-width: 300px;
+=======
+@media (max-width: 812px){
+  .bar {
+    max-width: 200px;
+  }
+>>>>>>> 4a7064ec577574ff31db31546dc9e356658f61f8
 }
 
 div.click-to-top {
