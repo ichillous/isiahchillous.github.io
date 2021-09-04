@@ -1,6 +1,9 @@
 Options +FollowSymLinks
 RewriteEngine On
 
+RewriteCond %{HTTP_HOST} ^isiahchillous.com
+RewriteRule (.*) https://www.isiahchillous.com/$1 [R=301,L]
+
 # Remove trailing slashes.
 # e.g. example.com/foo/ will redirect to example.com/foo
 RewriteCond %{REQUEST_FILENAME} !-d
