@@ -198,7 +198,7 @@ $(function() {
     }
   });
 
-  bar.animate(.75);
+  bar.animate(.95);
 
   var bar = new ProgressBar.Line(lineprog4, {
     strokeWidth: 1.72,
