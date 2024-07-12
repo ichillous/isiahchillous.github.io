@@ -77,7 +77,7 @@ export default function IsiahChillousWebsite() {
       <header className="fixed-top bg-dark">
         <nav className="navbar navbar-expand-lg navbar-dark">
           <div className="container">
-            <a className="navbar-brand" href="#">
+            <a className="navbar-brand" href="#home">
               Isiah Chillous
             </a>
             <button
@@ -107,7 +107,7 @@ export default function IsiahChillousWebsite() {
       </header>
 
       {/* Hero Section */}
-      <section className="hero-section vh-100 d-flex align-items-center text-center">
+      <section id="home" className="hero-section vh-100 d-flex align-items-center text-center">
         <div className="container ">
           <h1 className="display-4 fw-bold mb-4">
             Crafting Innovative Software Solutions
