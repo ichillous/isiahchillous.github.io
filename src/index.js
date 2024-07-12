@@ -1,13 +1,14 @@
+// src/index.js
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import IsiahChillousWebsite from './App';
 import reportWebVitals from './reportWebVitals';
-
+import './App.css';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <IsiahChillousWebsite />
   </React.StrictMode>
 );
 

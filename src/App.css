@@ -1,38 +1,212 @@
-.App {
-  text-align: center;
+/* App.css */
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: "Poppins", sans-serif !important;
+  font-optical-sizing: auto;
+  font-size: normal;
+  background-color: rgba(25, 25, 35, 1);
+  color: #2c2c2a;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+
+
+.bg-dark {
+  background-color: rgba(25, 25, 35, 0.9) !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Navbar */
+.navbar {
+  background-color: rgba(33, 37, 41, 0) !important;
+}
+.navbar-expand-lg {
+  background-color: rgba(33, 37, 41, 0) !important;
+}
+.navbar-dark {
+  background-color: rgba(33, 37, 41, 0.0) !important;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar-brand, .nav-link {
+  color: #e2e8f0 !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.nav-link:hover {
+  color: #43a3e0 !important;
+}
+
+/* input, buttons, misc elements */
+.btn-primary {
+  background-color: #3969b7;
+  border-color: #3b82f6;
+}
+.text-center {
+  color: rgba(165, 203, 195, 0.9);
+}
+
+input, textarea {
+  background-color: rgba(30, 41, 59, 0.8) !important;
+  border: 1px solid #34465d !important;
+  color: #e2e8f0 !important;
+}
+
+input:focus, textarea:focus {
+  box-shadow: 0 0 0 0.25rem rgba(59, 130, 246, 0.25) !important;
+}
+
+.btn-primary:hover {
+  background-color: #1e4599;
+  border-color: #2563eb;
+}
+
+.badge {
+  font-size: 0.9rem;
+  font-weight: normal;
+}
+
+/* Cards */
+.card {
+  background-color: rgba(37, 37, 47, 1) !important;
+  color: #e2e8f0 !important;
+  border: none;
+  box-shadow: 3px 0 8px rgba(0, 0, 0, 0.324);
+  transition: transform 0.3s ease;
+}
+
+.card-body {
+  background-color: rgba(37, 37, 47, 0.2) !important;
+  border-radius: 10px;
+  color: rgba(255, 193, 8, 0.9) !important;
+  border: none;
+}
+
+.card-body-container {
+  background-color: rgba(32, 31, 42, 1) !important;
+  border-radius: 25px;
+  color: rgba(255, 193, 8, 0.9) !important;
+  border: none;
+  padding: 35px 25px 25px 25px !important;
+  margin-top: 30px;
+
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+
+
+
+/* Sections */
+
+#skills{
+  background-color: rgba(33, 37, 41, 0.01) !important;
+  backdrop-filter: blur(10px);
+}
+/* New styles for section backgrounds */
+.hero-section {
+  position: relative;
+  background-image: url("../public/assets/background/abs1.webp"); 
+  background-size: cover;
+  background-position: center;
+}
+
+.about-section {
+  position: relative;
+}
+
+.experience-section {
+  position: relative;
+}
+
+.projects-section {
+  position: relative;
+}
+
+.skills-section {
+  position: relative;
+}
+
+.contact-section {
+  position: relative;
+}
+
+
+
+
+/* background bg */
+/* this is the timeline line below */
+ul.timeline::after {
+  background-color:   rgba(11, 122, 117, 1) !important;
+  ;
+}
+
+.bg-secondary {
+  background-color: rgba(11, 122, 117, 1) !important;
+}
+
+.bsb-timeline-3 {
+  background-color: rgba(30, 41, 59, 0.0) !important;
+  
+}
+
+.bsb-timeline-3 .timeline-item::after {
+  background-color: rgba(11, 122, 117, 1) !important;
+  border-color: rgba(11, 122, 117, 1) !important;
+}
+
+.bsb-timeline-3 .timeline::before {
+  background-color: rgba(11, 122, 117, 1)!important;
+}
+
+.bsb-timeline-3 .timeline-content::before {
+  border-color: transparent rgba(30, 41, 59, 0.8) transparent transparent !important;
+}
+
+.bsb-timeline-3 .timeline-item.right .timeline-content::before {
+  border-color: transparent transparent transparent rgba(30, 41, 59, 0.8) !important;
+}
+
+.bsb-timeline-3 .card {
+  background-color: rgba(30, 41, 59, 0.8) !important;
+  
+}
+
+.bsb-timeline-3 .card-subtitle {
+  color: #a0aec0 !important;
+}
+
+.bsb-timeline-3 .card-title {
+  color: rgba(255, 191, 0, 0.943) !important;
+}
+
+.bsb-timeline-3 .card-title.card-exp-company {
+  color: rgba(255, 191, 0, 0.943) !important;
+  font-size: medium;
+  font-style: italic;
+}
+
+.bsb-timeline-3 .card-text {
+  color: rgba(255, 193, 8, 0.9) !important;
+}
+
+.bsb-timeline-3 .timeline-item .timeline-indicator::after {
+  color: rgba(30, 41, 59, 0.8);
+  border-width: 1px;
+  /* arrow for card rgba(11, 122, 117 */
+  --bsb-tl-indicator-color: rgba(11, 122, 116, 0.8);
+}
+
+footer {
+  background-color: rgba(25, 25, 35, 0.0) !important;
+}
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem !important;
   }
 }
