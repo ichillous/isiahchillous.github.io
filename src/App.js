@@ -290,7 +290,7 @@ export default function IsiahChillousWebsite() {
         </div>
         <div className="d-flex space-between justify-content-center mt-4">
           <a
-            href="tel:6145965899"
+            href="tel:+16145965899"
             target="_blank"
             rel="noopener noreferrer"
             className="mx-2"
