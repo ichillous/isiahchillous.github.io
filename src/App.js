@@ -122,8 +122,8 @@ export default function IsiahChillousWebsite() {
           <div className="card-body-container">
             <div className="container row mb-2 mb-md-5">
               <div className="row justify-content-md-center">
-                <div className="col-2 col-md-10 col-xxl-7">
-                  <img
+                <div id="about-img" className="col-3 col-md-10 col-xxl-7">
+                  <img id="about-img" 
                     className="img-fluid rounded shadow"
                     src="../assets/pro.jpg"
                     style={{ width: "30%" }}
