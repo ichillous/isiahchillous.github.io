@@ -115,7 +115,7 @@ export default function IsiahChillousWebsite() {
           <h1 className="display-4 fw-bold mb-4">
             Crafting Innovative Software Solutions
           </h1>
-          <p className="lead mb-5">Software Engineer & Chief Product Officer</p>
+          <p className="lead mb-5">Software Engineer</p>
         </div>
       </section>
 
@@ -247,7 +247,7 @@ export default function IsiahChillousWebsite() {
           </div>
         </div>
       </section>
-      
+
       <div className="absFooter">
         {/* Skills Section */}
         <section id="skills" className="skills-section py-6 bg-dark">
