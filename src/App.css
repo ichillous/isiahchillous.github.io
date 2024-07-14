@@ -105,11 +105,6 @@ input:focus, textarea:focus {
 
 /* Sections */
 
-#skills{
-  background-color: rgba(33, 37, 41, 0.01) !important;
-  backdrop-filter: blur(10px);
-}
-/* New styles for section backgrounds */
 .hero-section {
   position: relative;
   background-image: url("../public/assets/background/abs1.webp"); 
@@ -137,8 +132,32 @@ input:focus, textarea:focus {
   position: relative;
 }
 
-.skills-section {
+.absFooter {
   position: relative;
+  background-color: rgba(25, 25, 35, 0.9); /* Dark background */
+}
+
+.absFooter::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("../public/assets/background/abs4.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.9; /* Adjust this value to control the image visibility */
+  z-index: 0;
+}
+
+.absFooter > * {
+  position: relative;
+  z-index: 1;
+}
+
+#skills, #contact, footer {
+  background-color: transparent !important;
 }
 
 .contact-section {

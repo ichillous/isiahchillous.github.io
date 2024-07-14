@@ -107,7 +107,10 @@ export default function IsiahChillousWebsite() {
       </header>
 
       {/* Hero Section */}
-      <section id="home" className="hero-section vh-100 d-flex align-items-center text-center">
+      <section
+        id="home"
+        className="hero-section vh-100 d-flex align-items-center text-center"
+      >
         <div className="container ">
           <h1 className="display-4 fw-bold mb-4">
             Crafting Innovative Software Solutions
@@ -140,11 +143,11 @@ export default function IsiahChillousWebsite() {
                 <hr className="w-25 mx-auto mb-4 text-secondary" />
                 <p>
                   A solutions-oriented Software Engineer with experience
-                  developing and implementing performant software solutions
-                  and web architecture with exceptional user experience.
-                  Expert in designing, coding, testing, and debugging
-                  software solutions and managing software projects from
-                  conception to final product.
+                  developing and implementing performant software solutions and
+                  web architecture with exceptional user experience. Expert in
+                  designing, coding, testing, and debugging software solutions
+                  and managing software projects from conception to final
+                  product.
                 </p>
                 <p className="mt-4">
                   <span className="d-block display-6 lh-1">7+</span>
@@ -213,57 +216,29 @@ export default function IsiahChillousWebsite() {
       {/* Projects Section */}
       <section id="projects" className="projects-section py-5">
         <div className="container">
-            <div className="card-body-container">
-              <h2 className="text-center mb-5">Projects</h2>
-              <div className="row">
-                {projects.map((project, index) => (
-                  <div key={index} className="col-md-6 mb-4">
-                    <div className="card h-100">
-                      <div className="card-body">
-                        <h3 className="card-title">{project.name}</h3>
-                        <p className="card-text">{project.description}</p>
-                        {project.name === "Husna Application" && (
-                          <img
-                            src={project.img}
-                            alt="Husna Application"
-                            className="img-fluid"
-                          />
-                        )}
-                        {project.name === "Nationwide Connect" && (
-                          <img
-                            src={project.img}
-                            alt="Nationwide Connect"
-                            className="img-fluid"
-                          />
-                        )}
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-        </div>
-      </section>
-
-      {/* Skills Section */}
-      <section id="skills" className="skills-section py-6 bg-dark">
-        <div className="container">
           <div className="card-body-container">
-            <h2 className="text-center mb-6">Skills</h2>
-            <div className="row row-cols-3 row-cols-md-3  row-cols-lg-4 g-4 justify-content-center">
-              {skills.map((skill, index) => (
-                <div key={index} className="col text-center">
-                  <div id="skill-card" className="card  h-100  ">
-                    <div className="card-body d-flex flex-column justify-content-center align-items-center">
-                      <div className="mb-2">
+            <h2 className="text-center mb-5">Projects</h2>
+            <div className="row">
+              {projects.map((project, index) => (
+                <div key={index} className="col-md-6 mb-4">
+                  <div className="card h-100">
+                    <div className="card-body">
+                      <h3 className="card-title">{project.name}</h3>
+                      <p className="card-text">{project.description}</p>
+                      {project.name === "Husna Application" && (
                         <img
-                          src={skill.icon}
-                          alt={`${skill.name} icon`}
+                          src={project.img}
+                          alt="Husna Application"
                           className="img-fluid"
-                          style={{ width: "69px", height: "64px" }}
                         />
-                      </div>
-                      <h5 className="card-title">{skill.name}</h5>
+                      )}
+                      {project.name === "Nationwide Connect" && (
+                        <img
+                          src={project.img}
+                          alt="Nationwide Connect"
+                          className="img-fluid"
+                        />
+                      )}
                     </div>
                   </div>
                 </div>
@@ -272,51 +247,81 @@ export default function IsiahChillousWebsite() {
           </div>
         </div>
       </section>
+      
+      <div className="absFooter">
+        {/* Skills Section */}
+        <section id="skills" className="skills-section py-6 bg-dark">
+          <div className="container">
+            <div className="card-body-container">
+              <h2 className="text-center mb-6">Skills</h2>
+              <div className="row row-cols-3 row-cols-md-3  row-cols-lg-4 g-4 justify-content-center">
+                {skills.map((skill, index) => (
+                  <div key={index} className="col text-center">
+                    <div id="skill-card" className="card  h-100  ">
+                      <div className="card-body d-flex flex-column justify-content-center align-items-center">
+                        <div className="mb-2">
+                          <img
+                            src={skill.icon}
+                            alt={`${skill.name} icon`}
+                            className="img-fluid"
+                            style={{ width: "69px", height: "64px" }}
+                          />
+                        </div>
+                        <h5 className="card-title">{skill.name}</h5>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
 
-      {/* Contact Section */}
-      <section id="contact" className="py-5">
-        <div className="container">
-          <h2 className="text-center mb-5">Contact Me</h2>
-        </div>
-        <div className="d-flex space-between justify-content-center mt-4">
-          <a
-            href="tel:+16145965899"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mx-2"
-          >
-            <Phone size={40} />
-          </a>
-          <a
-            href="https://github.com/ichillous/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mx-2"
-          >
-            <Github size={40} />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/isiah-chillous/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mx-2"
-          >
-            <Linkedin size={40} />
-          </a>
-          <a href="mailto:isiah.chillous@gmail.com" className="mx-2">
-            <Mail size={40} />
-          </a>
-        </div>
-      </section>
+        {/* Contact Section */}
+        <section id="contact" className="py-5">
+          <div className="container">
+            <h2 className="text-center mb-5">Contact Me</h2>
+          </div>
+          <div className="d-flex space-between justify-content-center mt-4">
+            <a
+              href="tel:+16145965899"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mx-2"
+            >
+              <Phone size={40} />
+            </a>
+            <a
+              href="https://github.com/ichillous/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mx-2"
+            >
+              <Github size={40} />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/isiah-chillous/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mx-2"
+            >
+              <Linkedin size={40} />
+            </a>
+            <a href="mailto:isiah.chillous@gmail.com" className="mx-2">
+              <Mail size={40} />
+            </a>
+          </div>
+        </section>
 
-      {/* Footer */}
-      <footer className="py-4 text-center">
-        <div className="container">
-          <p className="mb-0">
-            &copy; 2024 Isiah Chillous. All rights reserved.
-          </p>
-        </div>
-      </footer>
+        {/* Footer */}
+        <footer className="py-4 text-center">
+          <div className="container">
+            <p className="mb-0">
+              &copy; 2024 Isiah Chillous. All rights reserved.
+            </p>
+          </div>
+        </footer>
+      </div>
     </div>
   );
 }
