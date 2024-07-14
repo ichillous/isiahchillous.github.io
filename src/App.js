@@ -118,50 +118,40 @@ export default function IsiahChillousWebsite() {
 
       {/* About Section */}
       <section id="about" className="about-section py-3 py-md-5 pb-md-7">
-        <div className="container ">
+        <div className="container">
           <div className="card-body-container">
-            <div className="container row mb-2 mb-md-5">
-              <div className="row justify-content-md-center">
-                <div id="about-img" className="col-3 col-md-10 col-xxl-7">
-                  <img id="about-img" 
-                    className="img-fluid rounded shadow"
-                    src="../assets/pro.jpg"
-                    style={{ width: "30%" }}
-                    alt="About Me"
-                  />
-                </div>
+            <div className="row justify-content-center mb-4">
+              <div className="col-12 col-sm-10 col-md-8 col-lg-6">
+                <img
+                  id="about-img"
+                  className="img-fluid rounded shadow w-100"
+                  src="../assets/pro.jpg"
+                  alt="About Me"
+                />
               </div>
             </div>
 
-            <div className="container row overflow-hidden">
-              <div className="row gy-2 gy-md-0 justify-content-xxl-center">
-                <div className="col-12 order-md-1 col-md-8 col-xxl-6">
-                  <div className="text-center text-md-start">
-                    <h2 className="display-3 fw-bold lh-1">Isiah Chillous</h2>
-                    <p className="text-secondary fs-4 mb-2">
-                      Software Engineer & Chief Product Officer
-                    </p>
-                    <hr className="w-25 mx-auto ms-md-0 mb-4 text-secondary" />
-                    <p>
-                      A solutions-oriented Software Engineer with experience
-                      developing and implementing performant software solutions
-                      and web architecture with exceptional user experience.
-                      Expert in designing, coding, testing, and debugging
-                      software solutions and managing software projects from
-                      conception to final product.
-                    </p>
-                  </div>
-                </div>
-                <div className="col-12 order-md-0 col-md-4 col-xxl-4">
-                  <div className="text-center text-md-start me-md-3 me-xl-5">
-                    <p className="mb-4">
-                      <span className="d-block display-6 lh-1">7+</span>
-                      <span className="fs-4 text-secondary">
-                        years of experience
-                      </span>
-                    </p>
-                  </div>
-                </div>
+            <div className="row justify-content-center">
+              <div className="col-12 col-md-10 col-lg-8 text-center">
+                <h2 className="display-3 fw-bold lh-1">Isiah Chillous</h2>
+                <p className="text-secondary fs-4 mb-2">
+                  Software Engineer & Chief Product Officer
+                </p>
+                <hr className="w-25 mx-auto mb-4 text-secondary" />
+                <p>
+                  A solutions-oriented Software Engineer with experience
+                  developing and implementing performant software solutions
+                  and web architecture with exceptional user experience.
+                  Expert in designing, coding, testing, and debugging
+                  software solutions and managing software projects from
+                  conception to final product.
+                </p>
+                <p className="mt-4">
+                  <span className="d-block display-6 lh-1">7+</span>
+                  <span className="fs-4 text-secondary">
+                    years of experience
+                  </span>
+                </p>
               </div>
             </div>
           </div>
