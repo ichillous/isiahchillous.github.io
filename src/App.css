@@ -117,8 +117,16 @@ input:focus, textarea:focus {
   background-position: center;
 }
 
-.about-section {
-  position: relative;
+.about-section .card-body-container {
+  padding: 2rem !important;
+}
+
+#about-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 5px solid rgba(11, 122, 117, 0.15);
 }
 
 .experience-section {
