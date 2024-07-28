@@ -1,6 +1,17 @@
 import React, { useState } from "react";
 import { Menu, X, Github, Linkedin, Mail, Phone } from "lucide-react";
+import FontFaceObserver from "fontfaceobserver";
 
+const nabla = new FontFaceObserver("Nabla");
+
+nabla
+  .load()
+  .then(() => {
+    document.documentElement.classList.add("fonts-loaded");
+  })
+  .catch((e) => {
+    console.error("Font loading failed", e);
+  });
 const skills = [
   { name: "Java", icon: "../assets/icons/java-icon.png" },
   { name: "Angular", icon: "../assets/icons/angular-icon.png" },
@@ -140,20 +151,13 @@ export default function IsiahChillousWebsite() {
       </header>
 
       {/* Home Section */}
-      <section
-        id="home"
-        className="home-section vh-100 d-flex align-items-center text-center"
-      >
-        <div class="circle circle-1"></div>
-        <div class="circle circle-2"></div>
-        <div class="circle circle-3"></div>
+      <section id="home" className="home-section">
+        <div className="circle circle-1"></div>
+        <div className="circle circle-2"></div>
+        <div className="circle circle-3"></div>
         <div className="home-container">
-          <h1 id="home-title" className="display-4 fw-bold mb-4">
-            Crafting Innovative Software Solutions
-          </h1>
-          <p id="home-subtitle" className="lead mb-5">
-            Software Engineer
-          </p>
+          <h1 id="home-title">Crafting Innovative Software Solutions</h1>
+          <p id="home-subtitle">Software Engineer</p>
         </div>
       </section>
 
@@ -281,13 +285,13 @@ export default function IsiahChillousWebsite() {
       <div className="absFooter">
         {/* Skills Section */}
         <section id="skills" className="skills-section py-6 bg-dark">
-        <div className="skills-background">
-          <div className="circle circle-1"></div>
-          <div className="circle circle-2"></div>
-          <div className="circle circle-3"></div>
-          <div className="circle circle-4"></div>
-          <div className="circle circle-5"></div>
-        </div>
+          <div className="skills-background">
+            <div className="circle circle-1"></div>
+            <div className="circle circle-2"></div>
+            <div className="circle circle-3"></div>
+            <div className="circle circle-4"></div>
+            <div className="circle circle-5"></div>
+          </div>
           <div className="container">
             <div className="card-body-container">
               <h2 className="text-center mb-6">Skills</h2>
@@ -316,13 +320,13 @@ export default function IsiahChillousWebsite() {
 
         {/* Contact Section */}
         <section id="contact" className="py-5">
-        <div className="contact-background">
-          <div className="circle circle-1"></div>
-          <div className="circle circle-2"></div>
-          <div className="circle circle-3"></div>
-          <div className="circle circle-4"></div>
-          <div className="circle circle-5"></div>
-        </div>
+          <div className="contact-background">
+            <div className="circle circle-1"></div>
+            <div className="circle circle-2"></div>
+            <div className="circle circle-3"></div>
+            <div className="circle circle-4"></div>
+            <div className="circle circle-5"></div>
+          </div>
           <div className="container">
             <h2 className="text-center mb-5">Contact Me</h2>
           </div>

@@ -1,6 +1,7 @@
 /* App.css */
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -27,18 +28,17 @@ body {
   background-color: rgba(33, 37, 41, 0) !important;
 }
 .navbar-dark {
-  background-color: rgba(33, 37, 41, 0.0) !important;
+  background-color: rgba(33, 37, 41, 0) !important;
 }
 
-.navbar-brand, .nav-link {
+.navbar-brand,
+.nav-link {
   color: #e2e8f0 !important;
 }
 
 .nav-link:hover {
   color: #43a3e0 !important;
 }
-
-
 
 /* input, buttons, misc elements */
 .btn-primary {
@@ -49,13 +49,15 @@ body {
   color: rgba(165, 203, 195, 0.9);
 }
 
-input, textarea {
+input,
+textarea {
   background-color: rgba(30, 41, 59, 0.8) !important;
   border: 1px solid #34465d !important;
   color: #e2e8f0 !important;
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   box-shadow: 0 0 0 0.25rem rgba(59, 130, 246, 0.25) !important;
 }
 
@@ -85,11 +87,9 @@ input:focus, textarea:focus {
   border: none;
 }
 
-
-
 /* --------- Sections --------- */
 /* Home Section */
-.hero-section {
+.home-section {
   position: relative;
   height: 100vh;
   background-color: #000;
@@ -98,30 +98,43 @@ input:focus, textarea:focus {
   align-items: center;
   overflow: hidden;
 }
+
 .home-container {
   position: relative;
-  z-index: 2;
+  z-index: 10; /* Increase z-index to ensure it's above the circles */
   color: #fff !important;
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0); /* Add a semi-transparent background */
 }
+
 #home-title {
-  font-size: 120px;
+  font-size: 8vw; /* Increase font size */
   font-weight: bold;
-  font-family: 'Nabla', cursive;
+  font-family: "Nabla", "Arial", sans-serif; /* Add fallback fonts */
   text-transform: uppercase;
-  letter-spacing: 1vw;
+  letter-spacing: 0.5vw;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow for better visibility */
 }
+
 #home-subtitle {
-  font-size: 20px;
-  font-weight: thin;
-  font-family: 'Nabla', cursive;
+  font-size: 4vw;
+  font-weight: normal;
+  font-family: "Nabla", "Arial", sans-serif; /* Add fallback fonts */
   text-transform: uppercase;
-  letter-spacing: 5px;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.312); /* Add text shadow for better visibility */
 }
+
 .circle {
   position: absolute;
-  border: 2px solid #fff;
+  border: 2px solid rgba(255, 255, 255, 0.3); /* Make circles more transparent */
   border-radius: 50%;
-  opacity: 0.5;
+  z-index: 1; /* Ensure circles are below the text */
 }
 .circle-1 {
   width: 300px;
@@ -142,7 +155,6 @@ input:focus, textarea:focus {
   left: 15%;
   transform: translateY(-50%);
 }
-
 
 /* --------------------------------------- */
 /* About Section */
@@ -169,7 +181,7 @@ input:focus, textarea:focus {
 #home-title {
   font-size: 5vw; /* Use viewport width units for responsive font size */
   font-weight: bold;
-  font-family: 'Nabla', cursive;
+  font-family: "Nabla", cursive;
   text-transform: uppercase;
   letter-spacing: 0.5vw;
   word-wrap: break-word; /* Allow long words to break */
@@ -180,7 +192,7 @@ input:focus, textarea:focus {
 #home-subtitle {
   font-size: 3vw;
   font-weight: thin;
-  font-family: 'Nabla', cursive;
+  font-family: "Nabla", cursive;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
@@ -193,7 +205,7 @@ input:focus, textarea:focus {
   align-items: center;
   min-height: 100vh;
 }
-.about-background, 
+.about-background,
 .experience-background,
 .skills-background,
 .projects-background,
@@ -524,14 +536,15 @@ h2 {
   transform: rotateY(180deg);
 }
 
-.flip-card-front, .flip-card-back {
+.flip-card-front,
+.flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   border-radius: 10px 10px 10px 10px;
-  
+
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -574,16 +587,12 @@ h2 {
 }
 
 .projects-section .card-body-container {
-  
 }
-
-
 
 /* background bg */
 /* this is the timeline line below */
 ul.timeline::after {
-  background-color:   rgb(255, 255, 255) !important;
-  ;
+  background-color: rgb(255, 255, 255) !important;
 }
 
 .bg-secondary {
@@ -600,7 +609,7 @@ ul.timeline::after {
 }
 
 .bsb-timeline-3 .timeline::before {
-  background-color: rgb(255, 255, 255)!important;
+  background-color: rgb(255, 255, 255) !important;
 }
 
 .bsb-timeline-3 .timeline-content::before {
@@ -613,7 +622,6 @@ ul.timeline::after {
 
 .bsb-timeline-3 .card {
   background-color: rgba(255, 255, 255, 0.8) !important;
-  
 }
 
 .bsb-timeline-3 .card-subtitle {
@@ -630,7 +638,7 @@ ul.timeline::after {
   border: none;
 }
 
-.bsb-timeline-3 .card-body .p-xl-4{
+.bsb-timeline-3 .card-body .p-xl-4 {
   max-width: 400px !important;
 }
 
@@ -646,7 +654,7 @@ ul.timeline::after {
 
 .bsb-timeline-3 .timeline-item .timeline-indicator::after {
   color: rgb(255, 255, 255);
-  
+
   /* arrow for card rgba(11, 122, 117 */
   --bsb-tl-indicator-color: rgb(255, 255, 255);
 }
@@ -663,7 +671,7 @@ ul.timeline::after {
 }
 
 footer {
-  background-color: rgba(25, 25, 35, 0.0) !important;
+  background-color: rgba(25, 25, 35, 0) !important;
 }
 
 /*  Media Queries */
@@ -672,11 +680,22 @@ footer {
     font-size: 2.5rem !important;
   }
   #home-title {
-    font-size: 8vw; /* Increase font size for better readability on small screens */
+    font-size: 10vw; /* Further increase font size for mobile */
   }
   
   #home-subtitle {
-    font-size: 4vw;
+    font-size: 5vw;
+  }
+  
+  .home-container {
+    width: 90%; /* Limit width on mobile */
+  }
+
+
+  /* Font loading fallback */
+  .fonts-loaded #home-title,
+  .fonts-loaded #home-subtitle {
+    font-family: 'Nabla', 'Arial', sans-serif;
   }
   .about-section {
     padding-top: 0px 10px !important;
@@ -697,7 +716,6 @@ footer {
     padding-top: 0px 15px !important;
   }
 
-
   .skills-section .circle-1 {
     width: 400px;
     height: 200px;
@@ -705,28 +723,28 @@ footer {
     left: 55%;
     rotate: 30deg;
   }
-  
+
   .skills-section .circle-2 {
     width: 300px;
     height: 300px;
     bottom: 10%;
     right: 80%;
   }
-  
+
   .skills-section .circle-3 {
     width: 200px;
     height: 200px;
     top: 45%;
     left: 40%;
   }
-  
+
   .skills-section .circle-4 {
     width: 150px;
     height: 150px;
     top: 10%;
     right: 90%;
   }
-  
+
   .skills-section .circle-5 {
     width: 150px;
     height: 150px;
