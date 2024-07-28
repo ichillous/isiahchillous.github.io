@@ -829,3 +829,35 @@ footer {
     left: 90%;
   }
 }
+@supports (-webkit-touch-callout: none) {
+  #home-title, #home-subtitle {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  }
+  
+  #home-title {
+    font-size: 10vw; /* Slightly larger for iOS */
+    font-weight: 900; /* Extra bold to mimic Nabla's weight */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5), -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  }
+  
+  #home-subtitle {
+    font-size: 5vw; /* Slightly larger for iOS */
+    font-weight: 700; /* Bold to stand out */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+  }
+}
+
+/* General font loading improvements */
+@font-face {
+  font-family: 'Nabla';
+  src: url('../public/fonts/Nabla/Nabla-Regular-VariableFont_EDPT,EHLT.ttf') format('truetype-variations'),
+       url('../public/fonts/Nabla/static/Nabla-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.fonts-loaded #home-title,
+.fonts-loaded #home-subtitle {
+  font-family: 'Nabla', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+}
