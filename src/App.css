@@ -237,12 +237,7 @@ textarea:focus {
   align-items: center;
   min-height: 100vh;
 }
-.about-container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
+
 .about-background,
 .experience-background,
 .skills-background,
@@ -283,6 +278,7 @@ textarea:focus {
 /* Top Left card */
 .about-section .card-large {
   border-radius: 90px 0px 90px 90px;
+  padding: auto;
   grid-column: 1 / 2;
   grid-row: 1 / 2;
   max-height: 400px;
@@ -750,8 +746,28 @@ footer {
     font-family: 'Nabla', 'Arial', sans-serif;
   }
   .about-section {
-    padding-top: 0px 10px !important;
+    
   }
+  .about-section .card h2 {
+    font-size: clamp(1.25rem, 5vw, 1.5rem);
+    padding-top: 5%;
+    padding-left: 5%;
+  }
+
+  .about-section .card p {
+    font-size: clamp(0.75rem, 3vw, 0.875rem);
+    padding-left: 5%;
+    padding-bottom: 5%;
+  }
+
+  .about-section .card-icon .icon {
+    font-size: clamp(1.5rem, 8vw, 2rem);
+  }
+
+  .about-section .card-large {
+    padding: 15px;
+  }
+
   .about-container {
     grid-template-columns: 1fr;
     grid-template-rows: auto;

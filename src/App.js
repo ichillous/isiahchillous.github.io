@@ -166,9 +166,7 @@ export default function IsiahChillousWebsite() {
             <p>
               A solutions-oriented Software Engineer with experience developing
               and implementing performant software solutions and web
-              architecture with exceptional user experience. Expert in
-              designing, coding, testing, and debugging software solutions and
-              managing software projects from conception to final product.
+              architecture with exceptional user experience. 
             </p>
           </div>
           <div className="card card-image1">
