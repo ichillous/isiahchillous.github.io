@@ -1,12 +1,10 @@
 /* App.css */
 
-html,
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
 }
-
 body {
   font-family: "Poppins", sans-serif;
   font-optical-sizing: auto;
@@ -15,7 +13,28 @@ body {
   color: #fff;
 }
 
+.container, .container-fluid {
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 100%;
+}
+
+
+
 /*  General Styling */
+/* Section centering */
+.home-section,
+.about-section,
+.experience-section,
+.projects-section,
+.skills-section,
+.contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 50px 0;
+}
 .bg-dark {
   background-color: #000 !important;
 }
@@ -163,11 +182,10 @@ textarea:focus {
   right: -50px;
 }
 .circle-3 {
-  width: 150px;
-  height: 150px;
-  top: 70%;
-  left: 15%;
-  transform: translateY(-50%);
+  width: 200px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
 }
 
 /* --------------------------------------- */
@@ -218,6 +236,12 @@ textarea:focus {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+}
+.about-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 .about-background,
 .experience-background,
@@ -335,6 +359,7 @@ h2 {
 /* Common styles for circles */
 .circle {
   position: absolute;
+  max-width: 100%;
   border: 2px solid #fff;
   border-radius: 50%;
   opacity: 0.5;
@@ -445,7 +470,7 @@ h2 {
   width: 300px;
   height: 300px;
   top: 50%;
-  right: 10%;
+  right: 100%;
 }
 
 /* Skills Section Circles */
@@ -503,7 +528,7 @@ h2 {
 .contact-section .circle-3 {
   width: 200px;
   height: 200px;
-  top: 15%;
+  top: 25%;
   left: 20%;
 }
 
