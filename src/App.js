@@ -1,17 +1,6 @@
 import React, { useState } from "react";
 import { Menu, X, Github, Linkedin, Mail, Phone } from "lucide-react";
-import FontFaceObserver from "fontfaceobserver";
 
-const nabla = new FontFaceObserver("Nabla");
-
-nabla
-  .load()
-  .then(() => {
-    document.documentElement.classList.add("fonts-loaded");
-  })
-  .catch((e) => {
-    console.error("Font loading failed", e);
-  });
 const skills = [
   { name: "Java", icon: "../assets/icons/java-icon.png" },
   { name: "Angular", icon: "../assets/icons/angular-icon.png" },

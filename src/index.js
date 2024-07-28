@@ -5,6 +5,16 @@ import './index.css';
 import IsiahChillousWebsite from './App';
 import reportWebVitals from './reportWebVitals';
 import './App.css';
+import FontFaceObserver from 'fontfaceobserver';
+
+// Font loading code
+const nabla = new FontFaceObserver('Nabla');
+nabla.load().then(() => {
+  document.documentElement.classList.add('fonts-loaded');
+}).catch((e) => {
+  console.error('Font loading failed', e);
+});
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
