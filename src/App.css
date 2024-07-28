@@ -7,18 +7,16 @@ html, body {
 }
 
 body {
-  font-family: "Poppins", sans-serif !important;
+  font-family: "Poppins", sans-serif;
   font-optical-sizing: auto;
   font-size: normal;
-  background-color: rgba(25, 25, 35, 1);
-  color: #2c2c2a;
+  background-color: #000;
+  color: #fff;
 }
 
-
-
-
+/*  General Styling */
 .bg-dark {
-  background-color: rgba(25, 25, 35, 0.9) !important;
+  background-color: #000 !important;
 }
 
 /* Navbar */
@@ -39,6 +37,8 @@ body {
 .nav-link:hover {
   color: #43a3e0 !important;
 }
+
+
 
 /* input, buttons, misc elements */
 .btn-primary {
@@ -86,91 +86,466 @@ input:focus, textarea:focus {
 }
 
 
-.card-body-container {
-  background-color: rgba(32, 31, 42, 1) !important;
-  border-radius: 25px;
-  color: rgba(255, 193, 8, 0.9) !important;
-  border: none;
-  padding: 35px 25px 25px 25px !important;
-  margin-top: 30px;
 
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-
-
-
-/* Sections */
-
+/* --------- Sections --------- */
+/* Home Section */
 .hero-section {
   position: relative;
-  background-image: url("../public/assets/background/abs1.webp"); 
-  background-size: cover;
-  background-position: center;
+  height: 100vh;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
-
-.about-section .card-body-container {
-  padding: 2rem !important;
-}
-
-#about-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 15px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border: 5px solid rgba(11, 122, 117, 0.15);
-}
-
-.experience-section {
+.home-container {
   position: relative;
+  z-index: 2;
+  color: #fff !important;
+}
+#home-title {
+  font-size: 120px;
+  font-weight: bold;
+  font-family: 'Nabla', cursive;
+  text-transform: uppercase;
+  letter-spacing: 1vw;
+}
+#home-subtitle {
+  font-size: 20px;
+  font-weight: thin;
+  font-family: 'Nabla', cursive;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+.circle {
+  position: absolute;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  opacity: 0.5;
+}
+.circle-1 {
+  width: 300px;
+  height: 300px;
+  top: -50px;
+  left: -100px;
+}
+.circle-2 {
+  width: 200px;
+  height: 200px;
+  bottom: -50px;
+  right: -50px;
+}
+.circle-3 {
+  width: 150px;
+  height: 150px;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
 }
 
-.projects-section {
+
+/* --------------------------------------- */
+/* About Section */
+/* --------------------------------------- */
+.about-section {
   position: relative;
+  overflow: hidden;
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
-
-.absFooter {
-  position: relative;
-  background-color: rgba(25, 25, 35, 0.9); /* Dark background */
-}
-
-.absFooter::before {
-  content: "";
+.about-background, 
+.experience-background,
+.skills-background,
+.projects-background,
+.contact-background {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url("../public/assets/background/abs4.png");
-  background-size: cover;
-  background-position: center;
-  opacity: 0.9; /* Adjust this value to control the image visibility */
   z-index: 0;
 }
 
-.absFooter > * {
+.about-container {
   position: relative;
   z-index: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr; /* This makes the second row thinner */
+  gap: 20px;
+  padding: 0 5px;
 }
 
-#skills, #contact, footer {
-  background-color: transparent !important;
+.about-section .card {
+  background-color: #ffffff !important;
+  padding: 40px;
+  display: flex;
+  color: #000 !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* This centers the content horizontally */
+  box-shadow: none;
+  overflow: hidden;
 }
 
+/* Top Left card */
+.about-section .card-large {
+  border-radius: 90px 0px 90px 90px;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  max-height: 400px;
+  align-items: flex-start; /* Aligns text to the left */
+}
+
+/* Top Right card */
+.about-section .card-image1 {
+  border-radius: 0px 200px;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  max-height: 400px;
+  padding: 0;
+}
+
+/* Bottom Left card */
+.about-section .card-image2 {
+  border-radius: 180px 190px 180px 0px;
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  padding: 0;
+  max-height: 250px;
+}
+
+/* Bottom Right card */
+.about-section .card-icon {
+  border-radius: 180px 180px 180px 180px;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  text-align: center;
+  max-height: 250px;
+}
+
+.about-section .card-image1 img,
+.about-section .card-image2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+.about-section .card h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #000000 !important;
+}
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #ffffff !important;
+}
+
+.about-section .card p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #000000 !important;
+}
+
+.about-section .icon {
+  font-size: 4rem; /* Increased icon size */
+  margin-bottom: 1rem;
+}
+
+/* Common styles for all sections */
+.about-section,
+.experience-section,
+.projects-section,
+.skills-section,
 .contact-section {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Common styles for circles */
+.circle {
+  position: absolute;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
+/* About Section Circles */
+.about-section .circle-1 {
+  width: 400px;
+  height: 400px;
+  top: 200px;
+  left: -200px;
+}
+
+.about-section .circle-2 {
+  width: 300px;
+  height: 300px;
+  bottom: 150px;
+  right: -100px;
+}
+
+.about-section .circle-3 {
+  width: 200px;
+  height: 200px;
+  top: 15%;
+  left: 20%;
+}
+
+.about-section .circle-4 {
+  width: 150px;
+  height: 150px;
+  top: 20%;
+  right: 12%;
+}
+
+.about-section .circle-5 {
+  width: 150px;
+  height: 150px;
+  bottom: 10%;
+  left: 50%;
+}
+
+/* Experience Section Circles */
+.experience-section .circle-1 {
+  width: 400px;
+  height: 400px;
+  top: 10px;
+  left: 1200px;
+}
+
+.experience-section .circle-2 {
+  width: 300px;
+  height: 300px;
+  bottom: 50px;
+  right: 250px;
+}
+
+.experience-section .circle-3 {
+  width: 200px;
+  height: 200px;
+  top: 15%;
+  left: 20%;
+}
+
+.experience-section .circle-4 {
+  width: 150px;
+  height: 150px;
+  top: 30%;
+  right: 65%;
+}
+
+.experience-section .circle-5 {
+  width: 150px;
+  height: 150px;
+  bottom: 20%;
+  left: 50%;
+}
+
+/* Projects Section Circles */
+.projects-section .circle-1 {
+  width: 200px;
+  height: 400px;
+  top: 100px;
+  right: 200px;
+}
+
+.projects-section .circle-2 {
+  width: 200px;
+  height: 500px;
+  bottom: 100px;
+  left: 750px;
+}
+
+.projects-section .circle-3 {
+  width: 200px;
+  height: 200px;
+  top: 30%;
+  right: 20%;
+}
+
+.projects-section .circle-4 {
+  width: 150px;
+  height: 150px;
+  bottom: 10%;
+  left: 30%;
+}
+
+.projects-section .circle-5 {
+  width: 300px;
+  height: 300px;
+  top: 50%;
+  right: 10%;
+}
+
+/* Skills Section Circles */
+.skills-section .circle-1 {
+  width: 400px;
+  height: 200px;
+  top: 200px;
+  left: 10px;
+  rotate: 30deg;
+}
+
+.skills-section .circle-2 {
+  width: 300px;
+  height: 300px;
+  bottom: 150px;
+  right: 10px;
+}
+
+.skills-section .circle-3 {
+  width: 200px;
+  height: 200px;
+  top: 35%;
+  left: 30%;
+}
+
+.skills-section .circle-4 {
+  width: 150px;
+  height: 150px;
+  top: 20%;
+  right: 15%;
+}
+
+.skills-section .circle-5 {
+  width: 150px;
+  height: 150px;
+  bottom: 10%;
+  left: 50%;
+}
+
+/* Contact Section Circles */
+.contact-section .circle-1 {
+  width: 400px;
+  height: 400px;
+  top: -200px;
+  left: -200px;
+}
+
+.contact-section .circle-2 {
+  width: 300px;
+  height: 300px;
+  bottom: -150px;
+  right: -150px;
+}
+
+.contact-section .circle-3 {
+  width: 200px;
+  height: 200px;
+  top: 15%;
+  left: 20%;
+}
+
+.contact-section .circle-4 {
+  width: 150px;
+  height: 150px;
+  top: 20%;
+  right: 15%;
+}
+
+.contact-section .circle-5 {
+  width: 150px;
+  height: 150px;
+  bottom: 10%;
+  left: 50%;
+}
+/* --------------------------------------- */
+/* Experience Section */
+/* --------------------------------------- */
+.experience-section {
   position: relative;
 }
 
+/* --------------------------------------- */
+/* PROJECT SECTION */
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 400px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 10px 10px 10px 10px;
+  
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.flip-card-front {
+  background-color: #f0f0f0;
+}
+
+.flip-card-back {
+  background-color: #ffffff;
+  color: #000000;
+  transform: rotateY(180deg);
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.flip-card-back .project-image {
+  height: 70%;
+}
+
+.project-content {
+  padding: 1rem;
+  height: 50%;
+  overflow-y: auto;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.projects-section .card-body-container {
+  
+}
 
 
 
 /* background bg */
 /* this is the timeline line below */
 ul.timeline::after {
-  background-color:   rgba(11, 122, 117, 1) !important;
+  background-color:   rgb(255, 255, 255) !important;
   ;
 }
 
@@ -178,75 +553,140 @@ ul.timeline::after {
   background-color: rgba(11, 122, 117, 1) !important;
 }
 
-.bsb-timeline-3 {
-  background-color: rgba(30, 41, 59, 0.0) !important;
-  
-}
+/* .bsb-timeline-3 {
+  background-color: rgba254, 254, 254, 0) !important;
+} */
 
 .bsb-timeline-3 .timeline-item::after {
-  background-color: rgba(11, 122, 117, 1) !important;
-  border-color: rgba(11, 122, 117, 1) !important;
+  background-color: rgb(255, 255, 255) !important;
+  border-color: rgb(255, 255, 255) !important;
 }
 
 .bsb-timeline-3 .timeline::before {
-  background-color: rgba(11, 122, 117, 1)!important;
+  background-color: rgb(255, 255, 255)!important;
 }
 
 .bsb-timeline-3 .timeline-content::before {
-  border-color: transparent rgba(30, 41, 59, 0.8) transparent transparent !important;
+  border-color: transparent rgb(255, 255, 255) transparent transparent !important;
 }
 
 .bsb-timeline-3 .timeline-item.right .timeline-content::before {
-  border-color: transparent transparent transparent rgba(30, 41, 59, 0.8) !important;
+  border-color: transparent transparent transparent rgb(255, 255, 255) !important;
 }
 
 .bsb-timeline-3 .card {
-  background-color: rgba(30, 41, 59, 0.8) !important;
+  background-color: rgba(255, 255, 255, 0.8) !important;
   
 }
 
 .bsb-timeline-3 .card-subtitle {
-  color: #a0aec0 !important;
+  color: #000000 !important;
 }
 
 .bsb-timeline-3 .card-title {
-  color: rgba(255, 191, 0, 0.943) !important;
+  color: rgb(0, 0, 0) !important;
+}
+.bsb-timeline-3 .card-body {
+  background-color: rgb(255, 255, 255) !important;
+  border-radius: 10px;
+  color: rgba(0, 0, 0, 0.9) !important;
+  border: none;
+}
+
+.bsb-timeline-3 .card-body .p-xl-4{
+  max-width: 400px !important;
 }
 
 .bsb-timeline-3 .card-title.card-exp-company {
-  color: rgba(255, 191, 0, 0.943) !important;
+  color: rgb(0, 0, 0) !important;
   font-size: medium;
   font-style: italic;
 }
 
 .bsb-timeline-3 .card-text {
-  color: rgba(255, 193, 8, 0.9) !important;
+  color: rgb(0, 0, 0) !important;
 }
 
 .bsb-timeline-3 .timeline-item .timeline-indicator::after {
-  color: rgba(30, 41, 59, 0.8);
-  border-width: 1px;
+  color: rgb(255, 255, 255);
+  
   /* arrow for card rgba(11, 122, 117 */
-  --bsb-tl-indicator-color: rgba(11, 122, 116, 0.8);
+  --bsb-tl-indicator-color: rgb(255, 255, 255);
+}
+.skills-section .card-body {
+  background-color: rgb(0, 0, 0) !important;
+  border: 1px solid #fdfdfd;
+}
+.skills-section .card-title {
+  color: rgba(255, 255, 255, 1) !important;
+}
+
+.contact-section {
+  position: relative;
 }
 
 footer {
   background-color: rgba(25, 25, 35, 0.0) !important;
 }
-@media (max-width: 768px) {
-  .about-section .card-body-container {
-    padding: 1.5rem !important;
-  }
 
+/*  Media Queries */
+@media (max-width: 768px) {
   h1 {
     font-size: 2.5rem !important;
   }
-
-  .about-section .display-3 {
-    font-size: 2.5rem;
+  .about-section {
+    padding-top: 0px 10px !important;
+  }
+  .about-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    max-width: 600px;
+  }
+  .about-section .card,
+  .about-section .card-image1,
+  .about-section .card-image2,
+  .about-section .card-icon {
+    grid-column: 1 / -1;
+    grid-row: auto;
+  }
+  .about-section {
+    padding-top: 0px 15px !important;
   }
 
-  .about-section .fs-4 {
-    font-size: 1.1rem !important;
+
+  .skills-section .circle-1 {
+    width: 400px;
+    height: 200px;
+    top: 6%;
+    left: 55%;
+    rotate: 30deg;
+  }
+  
+  .skills-section .circle-2 {
+    width: 300px;
+    height: 300px;
+    bottom: 10%;
+    right: 80%;
+  }
+  
+  .skills-section .circle-3 {
+    width: 200px;
+    height: 200px;
+    top: 45%;
+    left: 40%;
+  }
+  
+  .skills-section .circle-4 {
+    width: 150px;
+    height: 150px;
+    top: 10%;
+    right: 90%;
+  }
+  
+  .skills-section .circle-5 {
+    width: 150px;
+    height: 150px;
+    bottom: 10%;
+    left: 90%;
   }
 }

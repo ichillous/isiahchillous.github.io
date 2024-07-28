@@ -59,14 +59,47 @@ const projects = [
     description:
       "Developed MVP backend using Node.js, MongoDB, and AWS for a social impact app.",
     img: "../assets/projects/husna.png",
+    frontImg: "../assets/projects/flip4.webp",
   },
   {
     name: "Nationwide Connect",
     description:
       "Built quoting page using Angular 14 and Formly, facilitating 100,000+ customer signups.",
     img: "../assets/projects/nwconnect.png",
+    frontImg: "../assets/projects/flip1.jpg",
   },
 ];
+
+const FlipCard = ({ project }) => (
+  <div className="flip-card">
+    <div className="flip-card-inner">
+      <div className="flip-card-front">
+        <img
+          src={project.frontImg}
+          alt={`${project.name} front`}
+          className="project-image"
+        />
+      </div>
+      <div className="flip-card-back">
+        <img src={project.img} alt={project.name} className="project-image" />
+        <div className="project-content">
+          <h3 className="card-title">{project.name}</h3>
+          <p className="card-text">{project.description}</p>
+          {project.link && (
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-primary mt-3"
+            >
+              View Project
+            </a>
+          )}
+        </div>
+      </div>
+    </div>
+  </div>
+);
 
 export default function IsiahChillousWebsite() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -106,56 +139,58 @@ export default function IsiahChillousWebsite() {
         </nav>
       </header>
 
-      {/* Hero Section */}
+      {/* Home Section */}
       <section
         id="home"
-        className="hero-section vh-100 d-flex align-items-center text-center"
+        className="home-section vh-100 d-flex align-items-center text-center"
       >
-        <div className="container ">
-          <h1 className="display-4 fw-bold mb-4">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+        <div class="circle circle-3"></div>
+        <div className="home-container">
+          <h1 id="home-title" className="display-4 fw-bold mb-4">
             Crafting Innovative Software Solutions
           </h1>
-          <p className="lead mb-5">Software Engineer</p>
+          <p id="home-subtitle" className="lead mb-5">
+            Software Engineer
+          </p>
         </div>
       </section>
 
       {/* About Section */}
-      <section id="about" className="about-section py-3 py-md-5 pb-md-7">
-        <div className="container">
-          <div className="card-body-container">
-            <div className="row justify-content-center mb-4">
-              <div className="col-12 col-sm-10 col-md-8 col-lg-6">
-                <img
-                  id="about-img"
-                  className="img-fluid rounded shadow w-100"
-                  src="../assets/pro.jpg"
-                  alt="About Me"
-                />
-              </div>
-            </div>
-
-            <div className="row justify-content-center">
-              <div className="col-12 col-md-10 col-lg-8 text-center">
-                <h2 className="display-3 fw-bold lh-1">Isiah Chillous</h2>
-                <p className="text-secondary fs-4 mb-2">
-                  Software Engineer & Chief Product Officer
-                </p>
-                <hr className="w-25 mx-auto mb-4 text-secondary" />
-                <p>
-                  A solutions-oriented Software Engineer with experience
-                  developing and implementing performant software solutions and
-                  web architecture with exceptional user experience. Expert in
-                  designing, coding, testing, and debugging software solutions
-                  and managing software projects from conception to final
-                  product.
-                </p>
-                <p className="mt-4">
-                  <span className="d-block display-6 lh-1">7+</span>
-                  <span className="fs-4 text-secondary">
-                    years of experience
-                  </span>
-                </p>
-              </div>
+      <section id="about" className="about-section">
+        <div className="about-background">
+          <div className="circle circle-1"></div>
+          <div className="circle circle-2"></div>
+          <div className="circle circle-3"></div>
+          <div className="circle circle-4"></div>
+          <div className="circle circle-5"></div>
+        </div>
+        <div className="about-container">
+          <div className="card card-large">
+            <h2>Isiah Chillous</h2>
+            <p>Software Engineer & Chief Product Officer</p>
+            <p>
+              A solutions-oriented Software Engineer with experience developing
+              and implementing performant software solutions and web
+              architecture with exceptional user experience. Expert in
+              designing, coding, testing, and debugging software solutions and
+              managing software projects from conception to final product.
+            </p>
+          </div>
+          <div className="card card-image1">
+            <img src="/assets/background/skyline-cmh.jpg" alt="skyline cmh" />
+          </div>
+          <div className="card card-image2">
+            <img src="../assets/pro.jpg" alt="About Me" />
+          </div>
+          <div className="card card-icon">
+            <div>
+              <div className="icon">⚙️</div>
+              <p>
+                7+ years of experience in software engineering and product
+                management
+              </p>
             </div>
           </div>
         </div>
@@ -166,6 +201,13 @@ export default function IsiahChillousWebsite() {
         id="experience"
         className="bsb-timeline-3 bg-dark py-4 py-md-5 py-xl-8 experience-section pt-md-7"
       >
+        <div className="experience-background">
+          <div className="circle circle-1"></div>
+          <div className="circle circle-2"></div>
+          <div className="circle circle-3"></div>
+          <div className="circle circle-4"></div>
+          <div className="circle circle-5"></div>
+        </div>
         <div className="container">
           <div className="card-body-container">
             <div className="row justify-content-center">
@@ -215,32 +257,20 @@ export default function IsiahChillousWebsite() {
 
       {/* Projects Section */}
       <section id="projects" className="projects-section py-5">
+        <div className="projects-background">
+          <div className="circle circle-1"></div>
+          <div className="circle circle-2"></div>
+          <div className="circle circle-3"></div>
+          <div className="circle circle-4"></div>
+          <div className="circle circle-5"></div>
+        </div>
         <div className="container">
           <div className="card-body-container">
             <h2 className="text-center mb-5">Projects</h2>
             <div className="row">
               {projects.map((project, index) => (
                 <div key={index} className="col-md-6 mb-4">
-                  <div className="card h-100">
-                    <div className="card-body">
-                      <h3 className="card-title">{project.name}</h3>
-                      <p className="card-text">{project.description}</p>
-                      {project.name === "Husna Application" && (
-                        <img
-                          src={project.img}
-                          alt="Husna Application"
-                          className="img-fluid"
-                        />
-                      )}
-                      {project.name === "Nationwide Connect" && (
-                        <img
-                          src={project.img}
-                          alt="Nationwide Connect"
-                          className="img-fluid"
-                        />
-                      )}
-                    </div>
-                  </div>
+                  <FlipCard project={project} />
                 </div>
               ))}
             </div>
@@ -251,6 +281,13 @@ export default function IsiahChillousWebsite() {
       <div className="absFooter">
         {/* Skills Section */}
         <section id="skills" className="skills-section py-6 bg-dark">
+        <div className="skills-background">
+          <div className="circle circle-1"></div>
+          <div className="circle circle-2"></div>
+          <div className="circle circle-3"></div>
+          <div className="circle circle-4"></div>
+          <div className="circle circle-5"></div>
+        </div>
           <div className="container">
             <div className="card-body-container">
               <h2 className="text-center mb-6">Skills</h2>
@@ -279,6 +316,13 @@ export default function IsiahChillousWebsite() {
 
         {/* Contact Section */}
         <section id="contact" className="py-5">
+        <div className="contact-background">
+          <div className="circle circle-1"></div>
+          <div className="circle circle-2"></div>
+          <div className="circle circle-3"></div>
+          <div className="circle circle-4"></div>
+          <div className="circle circle-5"></div>
+        </div>
           <div className="container">
             <h2 className="text-center mb-5">Contact Me</h2>
           </div>
