@@ -107,6 +107,20 @@ textarea:focus {
   text-align: center;
   background-color: rgba(0, 0, 0, 0); /* Add a semi-transparent background */
 }
+.home-container {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  z-index: 9999 !important;
+}
+
+#home-title, #home-subtitle {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  color: white !important;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8) !important;
+}
 
 #home-title {
   font-size: 8vw; /* Increase font size */
@@ -222,13 +236,12 @@ textarea:focus {
   position: relative;
   z-index: 1;
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 100;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr; /* This makes the second row thinner */
   gap: 20px;
-  padding: 0 5px;
+  padding: 0 5%;
 }
 
 .about-section .card {
@@ -586,8 +599,7 @@ h2 {
   margin-bottom: 1rem;
 }
 
-.projects-section .card-body-container {
-}
+
 
 /* background bg */
 /* this is the timeline line below */
@@ -679,19 +691,34 @@ footer {
   h1 {
     font-size: 2.5rem !important;
   }
-  #home-title {
-    font-size: 10vw; /* Further increase font size for mobile */
+  .home-section {
+    min-height: 100vh;
+    height: auto;
   }
-  
-  #home-subtitle {
-    font-size: 5vw;
-  }
-  
+
   .home-container {
-    width: 90%; /* Limit width on mobile */
+    position: absolute;
+    /* Center everything */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 600px;
   }
 
+  #home-title {
+    font-size: 8vw;
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
 
+  #home-subtitle {
+    font-size: 4vw;
+    line-height: 1.2;
+  }
   /* Font loading fallback */
   .fonts-loaded #home-title,
   .fonts-loaded #home-subtitle {
