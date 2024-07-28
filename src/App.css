@@ -147,6 +147,43 @@ input:focus, textarea:focus {
 /* --------------------------------------- */
 /* About Section */
 /* --------------------------------------- */
+
+/* Home Section */
+.home-section {
+  position: relative;
+  height: 100vh;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.home-container {
+  position: relative;
+  z-index: 2;
+  color: #fff !important;
+  padding: 0 15px; /* Add some padding */
+}
+
+#home-title {
+  font-size: 5vw; /* Use viewport width units for responsive font size */
+  font-weight: bold;
+  font-family: 'Nabla', cursive;
+  text-transform: uppercase;
+  letter-spacing: 0.5vw;
+  word-wrap: break-word; /* Allow long words to break */
+  overflow-wrap: break-word;
+  hyphens: auto; /* Enable hyphenation */
+}
+
+#home-subtitle {
+  font-size: 3vw;
+  font-weight: thin;
+  font-family: 'Nabla', cursive;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
 .about-section {
   position: relative;
   overflow: hidden;
@@ -633,6 +670,13 @@ footer {
 @media (max-width: 768px) {
   h1 {
     font-size: 2.5rem !important;
+  }
+  #home-title {
+    font-size: 8vw; /* Increase font size for better readability on small screens */
+  }
+  
+  #home-subtitle {
+    font-size: 4vw;
   }
   .about-section {
     padding-top: 0px 10px !important;

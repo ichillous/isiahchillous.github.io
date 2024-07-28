@@ -111,7 +111,7 @@ export default function IsiahChillousWebsite() {
         <nav className="navbar navbar-expand-lg navbar-dark">
           <div className="container">
             <a className="navbar-brand" href="#home">
-              Isiah Chillous
+              IC
             </a>
             <button
               className="navbar-toggler"
