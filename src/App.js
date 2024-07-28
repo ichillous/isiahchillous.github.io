@@ -69,37 +69,44 @@ const projects = [
     frontImg: "../assets/projects/flip1.jpg",
   },
 ];
+const FlipCard = ({ project }) => {
+  const [isFlipped, setIsFlipped] = useState(false);
 
-const FlipCard = ({ project }) => (
-  <div className="flip-card">
-    <div className="flip-card-inner">
-      <div className="flip-card-front">
-        <img
-          src={project.frontImg}
-          alt={`${project.name} front`}
-          className="project-image"
-        />
-      </div>
-      <div className="flip-card-back">
-        <img src={project.img} alt={project.name} className="project-image" />
-        <div className="project-content">
-          <h3 className="card-title">{project.name}</h3>
-          <p className="card-text">{project.description}</p>
-          {project.link && (
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-primary mt-3"
-            >
-              View Project
-            </a>
-          )}
+  const handleFlip = () => {
+    setIsFlipped(!isFlipped);
+  };
+
+  return (
+    <div className="flip-card" onClick={handleFlip}>
+      <div className={`flip-card-inner ${isFlipped ? 'flipped' : ''}`}>
+        <div className="flip-card-front">
+          <img
+            src={project.frontImg}
+            alt={`${project.name} front`}
+            className="project-image"
+          />
+        </div>
+        <div className="flip-card-back">
+          <img src={project.img} alt={project.name} className="project-image" />
+          <div className="project-content">
+            <h3 className="card-title">{project.name}</h3>
+            <p className="card-text">{project.description}</p>
+            {project.link && (
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary mt-3"
+              >
+                View Project
+              </a>
+            )}
+          </div>
         </div>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default function IsiahChillousWebsite() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -166,7 +173,7 @@ export default function IsiahChillousWebsite() {
             <p>
               A solutions-oriented Software Engineer with experience developing
               and implementing performant software solutions and web
-              architecture with exceptional user experience. 
+              architecture with exceptional user experience.
             </p>
           </div>
           <div className="card card-image1">
@@ -332,7 +339,7 @@ export default function IsiahChillousWebsite() {
               rel="noopener noreferrer"
               className="mx-2"
             >
-              <Github size={40}/>
+              <Github size={40} />
             </a>
             <a
               href="https://www.linkedin.com/in/isiah-chillous/"

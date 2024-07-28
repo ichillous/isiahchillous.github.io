@@ -26,7 +26,6 @@ body {
 .home-section,
 .about-section,
 .experience-section,
-.projects-section,
 .skills-section,
 .contact-section {
   display: flex;
@@ -345,13 +344,19 @@ h2 {
 /* Common styles for all sections */
 .about-section,
 .experience-section,
-.projects-section,
 .skills-section,
 .contact-section {
   position: relative;
   overflow: hidden;
 }
+.projects-section {
+  position: relative;
+  z-index: 1;
+}
 
+.flip-card {
+  z-index: 2;
+}
 /* Common styles for circles */
 .circle {
   position: absolute;
@@ -577,10 +582,8 @@ h2 {
   height: 100%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  border-radius: 10px 10px 10px 10px;
-
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .flip-card-front {
@@ -590,6 +593,9 @@ h2 {
 .flip-card-back {
   background-color: #ffffff;
   color: #000000;
+  transform: rotateY(180deg);
+}
+.flip-card-inner.flipped {
   transform: rotateY(180deg);
 }
 
@@ -859,5 +865,8 @@ footer {
 
 .fonts-loaded #home-title,
 .fonts-loaded #home-subtitle {
+  font-family: 'Nabla', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+}
+#home-title, #home-subtitle {
   font-family: 'Nabla', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
 }
