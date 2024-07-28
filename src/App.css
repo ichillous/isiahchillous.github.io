@@ -784,6 +784,9 @@ footer {
     padding-top: 0px 15px !important;
   }
 
+  .skills-section .card-title {
+    font-size: clamp(0.9rem, 3vw, 0.875rem);
+  }
   .skills-section .circle-1 {
     width: 400px;
     height: 200px;
