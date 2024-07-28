@@ -785,7 +785,13 @@ footer {
   }
 
   .skills-section .card-title {
-    font-size: clamp(0.9rem, 3vw, 0.875rem);
+    font-size: clamp(0.9rem, 3vw, 0.9rem);
+  }
+  .skills-section .card-body .img-fluid {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    width: auto;
   }
   .skills-section .circle-1 {
     width: 400px;
