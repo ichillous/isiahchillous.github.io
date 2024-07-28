@@ -131,15 +131,15 @@ input:focus, textarea:focus {
 }
 .circle-2 {
   width: 200px;
-  height: 200px;
+  height: 150px;
   bottom: -50px;
   right: -50px;
 }
 .circle-3 {
   width: 150px;
   height: 150px;
-  top: 50%;
-  left: 10%;
+  top: 70%;
+  left: 15%;
   transform: translateY(-50%);
 }
 
