@@ -334,7 +334,7 @@ export default function IsiahChillousWebsite() {
               rel="noopener noreferrer"
               className="mx-2"
             >
-              <Github size={40} />
+              <Github size={40}/>
             </a>
             <a
               href="https://www.linkedin.com/in/isiah-chillous/"
