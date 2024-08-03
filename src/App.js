@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Menu, X, Github, Linkedin, Mail, Phone } from "lucide-react";
+
+// TODO: Separate components 
 
 const skills = [
   { name: "Java", icon: "../assets/icons/java-icon.png" },
@@ -72,13 +74,32 @@ const projects = [
 const FlipCard = ({ project }) => {
   const [isFlipped, setIsFlipped] = useState(false);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const card = document.getElementById(`flip-card-${project.name}`);
+      if (card) {
+        const rect = card.getBoundingClientRect();
+        const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
+        if (!isVisible && isFlipped) {
+          setIsFlipped(false);
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [project.name, isFlipped]);
+
   const handleFlip = () => {
     setIsFlipped(!isFlipped);
   };
-
   return (
-    <div className="flip-card" onClick={handleFlip}>
-      <div className={`flip-card-inner ${isFlipped ? 'flipped' : ''}`}>
+    <div
+      id={`flip-card-${project.name}`}
+      className="flip-card"
+      onClick={handleFlip}
+    >
+      <div className={`flip-card-inner ${isFlipped ? "flipped" : ""}`}>
         <div className="flip-card-front">
           <img
             src={project.frontImg}
@@ -110,7 +131,35 @@ const FlipCard = ({ project }) => {
 
 export default function IsiahChillousWebsite() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  useEffect(() => {
+    // Smooth scroll behavior
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
 
+    // Font loading
+    const loadFont = async () => {
+      const font = new FontFace('Nabla', 'url(../public/fonts/Nabla/Nabla-Regular-VariableFont_EDPT,EHLT.ttf)');
+      await font.load();
+      document.fonts.add(font);
+      document.documentElement.classList.add('fonts-loaded');
+    };
+
+    loadFont().catch(err => console.error('Error loading font:', err));
+
+    // Improve scrolling on mobile
+    const improveScroll = () => {
+      document.body.style.height = 'auto';
+      document.body.style.overflow = 'visible';
+    };
+
+    improveScroll();
+  }, []);
   return (
     <div className="bg-dark text-light">
       {/* Header */}

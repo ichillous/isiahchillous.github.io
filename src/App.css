@@ -5,12 +5,16 @@ html, body {
   width: 100%;
   position: relative;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Poppins", sans-serif;
   font-optical-sizing: auto;
   font-size: normal;
   background-color: #000;
   color: #fff;
+  padding-top: 60px;
 }
 
 .container, .container-fluid {
@@ -28,6 +32,8 @@ body {
 .experience-section,
 .skills-section,
 .contact-section {
+  min-height: 100vh;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -866,3 +872,22 @@ footer {
   font-display: swap;
 }
 
+
+/* iOS-specific styles */
+@supports (-webkit-touch-callout: none) {
+  #home-title, #home-subtitle {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  }
+  
+  #home-title {
+    font-size: 10vw; /* Slightly larger for iOS */
+    font-weight: 900; /* Extra bold to mimic Nabla's weight */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5), -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  }
+  
+  #home-subtitle {
+    font-size: 5vw; /* Slightly larger for iOS */
+    font-weight: 700; /* Bold to stand out */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+  }
+}
