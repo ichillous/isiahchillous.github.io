@@ -1,0 +1,59 @@
+section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 4rem 0;
+  }
+  
+  /* Exclude the contact section from full-height requirement */
+  #contact {
+    min-height: auto;
+  }
+.contact-section {
+    min-height: auto;
+    padding: 1rem 0;
+    margin-top: 1%;
+  }
+  
+  /* Adjust the footer if necessary */
+  footer {
+    padding: 2rem 0;
+  }
+  
+  .contact-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+  }
+  
+  .contact-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .contact-icon {
+    color: #fff;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .contact-icon:hover {
+    transform: scale(1.1);
+    color: #43a3e0;
+  }
+  
+  @media (max-width: 768px) {
+    .contact-icons {
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+  
+    .contact-icon svg {
+      width: 32px;
+      height: 32px;
+    }
+  }
