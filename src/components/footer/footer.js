@@ -5,11 +5,9 @@ const Footer = () => {
     <footer className="footer-section">
 
         <div className="row">
-          <div className="col-lg-12">
+          <div className="col-lg-10">
             <div className="copyright-text">
-              <p>
-                Copyright © 2023 Isiah Chillous
-              </p>
+                Copyright © 2024 Isiah Chillous
             </div>
           </div>
         </div>

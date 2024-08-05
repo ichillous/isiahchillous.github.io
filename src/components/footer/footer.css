@@ -1,0 +1,29 @@
+.footer-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 10px;
+}
+footer {
+    text-align: center !important;
+    align-items: center !important;
+    justify-content: center !important;
+    align-content: center !important;
+}
+
+.footer-section .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-section .col-lg-10 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyright-text {
+    color: white;
+    font-size: 1.2rem;
+}

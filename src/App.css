@@ -63,7 +63,10 @@ section {
 
 /* Section specific styles */
 
-
+footer {
+  text-align: center;
+  padding-bottom: 2%;
+}
 
 
 @media (max-width: 768px) {
