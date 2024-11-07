@@ -7,7 +7,7 @@ function About() {
       <div className="about-container">
         <div className="card card-large">
           <h2>Isiah Chillous</h2>
-          <p>Software Engineer & Chief Product Officer</p>
+          <p>Software Engineer</p>
           <p>
             A solutions-oriented Software Engineer with experience developing
             and implementing performant software solutions and web
