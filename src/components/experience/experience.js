@@ -4,10 +4,10 @@ import './experience.css';
 const experiences = [
   {
     company: "HUSNA",
-    role: "Chief Product Officer - Technical Co Founder",
-    period: "2024 - Present",
+    role: "Software Engineer",
+    period: "2024",
     description:
-      "Leading product development and strategy, collaborating with software engineers and UX designers to build the Husna application.",
+      "Leading product development and strategy, collaborating with software engineers and UX designers to build the Husna application. Driving product vision, conducting user research, and ensuring alignment between product roadmap and user needs.",
   },
   {
     company: "Nationwide Insurance",
