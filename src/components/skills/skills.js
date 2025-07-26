@@ -17,21 +17,23 @@ const skills = [
 
 function Skills() {
   return (
-    <section id="skills" className="skills-section">
+    <section id="skills" className="skills-section" aria-labelledby="skills-title">
       <div className="container">
-        <h2 className="text-center mb-5">Skills</h2>
+        <h2 id="skills-title" className="text-center mb-5">Skills</h2>
         <div className="row row-cols-3 row-cols-md-3 row-cols-lg-4 g-4 justify-content-center">
-          {skills.map((skill, index) => (
-            <div key={index} className="col text-center">
+          {skills.map((skill) => (
+            <div key={skill.name} className="col text-center">
               <div className="skill-card">
                 <div className="skill-icon">
                   <img
                     src={process.env.PUBLIC_URL + skill.icon}
                     alt={`${skill.name} icon`}
                     className="img-fluid"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
-                <h5 className="skill-name">{skill.name}</h5>
+                <h3 className="skill-name" style={{fontSize: '1rem'}}>{skill.name}</h3>
               </div>
             </div>
           ))}

@@ -104,7 +104,7 @@
     .about-container {
       grid-template-columns: 1fr;
       grid-template-rows: auto;
-      max-width: 600px;
+      max-width: auto;
     }
     
     .about-section .card,
@@ -118,7 +118,6 @@
     .about-section .card h2 {
       font-size: clamp(1.25rem, 5vw, 1.5rem);
       padding-top: 5%;
-      padding-left: 5%;
     }
   
     .about-section .card p {

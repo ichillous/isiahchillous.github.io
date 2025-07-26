@@ -1,47 +1,33 @@
 .navbar {
-  background-color: rgb(0, 0, 0) !important;
-  transition: background-color 0.3s ease;
+  background: rgba(0,0,0,0.72) !important;
+  backdrop-filter: blur(8px);
+  transition: background-color .3s ease, backdrop-filter .3s ease;
+  border-bottom: 1px solid var(--border);
 }
-.container {
-    max-width: 100%;
-    margin: auto;
-}
+
 .navbar-brand {
   font-size: 1rem;
-  font-weight: thin;
-  align-items: left!important;
+  font-weight: 600;
   color: #e2e8f0 !important;
-  transition: color 0.3s ease;
+  letter-spacing: .06em;
 }
+.navbar-brand:hover { color: var(--accent) !important; }
 
-.navbar-brand:hover {
-  color: #43a3e0 !important;
-}
+.nav-link { color: #e2e8f0 !important; opacity: .9; }
+.nav-link:hover { color: var(--accent) !important; opacity: 1; }
 
-.navbar-brand,
-.nav-link {
+.navbar-toggler { border: none; }
+.navbar-toggler:focus { outline: none; box-shadow: none; }
 
-  color: #e2e8f0 !important;
-  transition: color 0.3s ease;
-}
-
-.nav-link:hover {
-  color: #43a3e0 !important;
-}
-
-.navbar-toggler {
-  border: none;
-}
-
-.navbar-toggler:focus {
-  outline: none;
-  box-shadow: none;
-}
-
+/* Collapsed menu panel */
 @media (max-width: 991px) {
   .navbar-collapse {
-    background-color: rgba(33, 37, 41, 0.95);
+    background: rgba(0,0,0,0.9);
+    border: 1px solid var(--border);
+    border-radius: 0 0 var(--radius) var(--radius);
     padding: 1rem;
-    border-radius: 0 0 0.5rem 0.5rem;
+    backdrop-filter: blur(8px);
   }
 }
+
+/* IMPORTANT: do not override Bootstrap .container sizing here */

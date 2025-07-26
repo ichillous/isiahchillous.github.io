@@ -1,81 +1,99 @@
-body, html {
+/* ===== THEME TOKENS (Dark / Black) ===== */
+:root{
+  --bg: #000000;             /* page background */
+  --fg: #ffffff;             /* main text */
+  --muted: #cbd5e1;          /* secondary text */
+  --accent: #43a3e0;         /* brand accent */
+  --card-bg: rgba(255,255,255,0.06); /* translucent card */
+  --card-bg-strong: rgba(255,255,255,0.09);
+  --border: rgba(255,255,255,0.12);
+  --shadow: 0 10px 30px rgba(0,0,0,0.6);
+  --radius: 14px;
+  --section-pad: clamp(2rem, 6vw, 5rem);
+}
+main {
+  padding-bottom: 96px;          
+}
+/* Fixed background layer (sits behind all content) */
+.site-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background-color: #000;
+  background-image: url("/public/assets/bg/bg-desktop.webp"); /* or your PNG */
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  will-change: background-position; /* hint for smoother updates */
+}
+
+
+/* Global */
+html, body {
   margin: 0;
   padding: 0;
-  height: 100%;
-  width: 100%;
-  overflow-x: hidden;
-  background-color: #000;
-  color: #fff;
-  font-family: 'Arial', sans-serif;
+  background: var(--bg);
+  color: var(--fg);
 }
 
-.background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(45deg, #1a1a1a, #2c2c2c);
-  z-index: -1;
-}
+* { box-sizing: border-box; }
 
-.stars {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-}
-
-.star {
-  position: absolute;
-  background-color: #fff;
-  border-radius: 50%;
-  animation: twinkle 5s infinite;
-}
-
-@keyframes twinkle {
-  0%, 100% { opacity: 0; }
-  50% { opacity: 1; }
-}
-
-.App {
-  position: relative;
-  z-index: 1;
-}
+.App { position: relative; z-index: 1; }
 
 section {
-  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0.1rem 0.1rem;
-  box-sizing: border-box;
+  padding: var(--section-pad) 1rem;
+  scroll-margin-top: 84px; /* for fixed header anchor targets */
+}
+.footer-section {
+  position: relative;
+  z-index: 2;                    /* lift it above content/background */
+}
+/* Links */
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Reusable glass layer */
+.glass {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(8px);
+}
+@supports not ((backdrop-filter: blur(8px))) {
+  .glass { background: var(--card-bg-strong); }
 }
 
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+/* Headings */
+h1, h2, h3 { letter-spacing: .02em; }
+.section-title { color: #fff; margin: 0 0 1rem; }
+
+/* Footer */
+footer { text-align: center; padding: 1.25rem 0; }
+
+/* Prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
 }
 
-/* Section specific styles */
-
-footer {
-  text-align: center;
-  padding-bottom: 1%;
-  justify-content: center;
-  align-items: center;
+/* Art-direction for tall or narrow screens */
+@media (max-aspect-ratio: 3/4) {
+  .site-bg { background-image: url("/public/assets/bg/bg-square.webp"); }
 }
 
-
-@media (max-width: 768px) {
-  footer {
-    text-align: center;
-    padding-bottom: 1%;
-    justify-content: center;
-    align-items: center;
-  }
+/* Optional subtle vignette/noise overlay for extra depth (pure CSS) */
+.site-bg::after {
+  content: "";
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(120% 120% at 50% 110%, rgba(0,0,0,.65) 0%, rgba(0,0,0,0) 45%) /* bottom fade */,
+    radial-gradient(120% 120% at -10% -10%, rgba(67,163,224,.06) 0%, rgba(0,0,0,0) 45%) /* faint accent */,
+    radial-gradient(120% 120% at 110% -10%, rgba(67,163,224,.05) 0%, rgba(0,0,0,0) 45%); /* faint accent */
+  pointer-events: none;
 }

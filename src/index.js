@@ -1,19 +1,17 @@
-
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import IsiahChillousWebsite from './App';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import App from './App';
 import reportWebVitals from './reportWebVitals';
-import './App.css';
 import FontFaceObserver from 'fontfaceobserver';
 
-// Font loading 
+// Optional: load Inter if you add it in public/index.html
 const loadFonts = async () => {
-  const nabla = new FontFaceObserver('Nabla');
-  
+  const inter = new FontFaceObserver('Inter');
   try {
     await Promise.race([
-      nabla.load(null, 3000), // 3 second timeout
+      inter.load(null, 3000),
       new Promise((_, reject) => setTimeout(() => reject(new Error('Font loading timed out')), 3000))
     ]);
     document.documentElement.classList.add('fonts-loaded');
@@ -22,17 +20,13 @@ const loadFonts = async () => {
     document.documentElement.classList.add('fonts-failed');
   }
 };
-
 loadFonts();
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <IsiahChillousWebsite />
+    <App />
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
